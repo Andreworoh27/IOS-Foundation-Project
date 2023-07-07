@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		252C65062A5815770025E048 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		252C65082A5821C70025E048 /* Subject - Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C65072A5821C70025E048 /* Subject - Reference.swift */; };
 		77874C692A581E2000DE4383 /* TutorialIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77874C682A581E2000DE4383 /* TutorialIntro.swift */; };
 		AC1EE35F2A57DD8400622438 /* MathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1EE35E2A57DD8400622438 /* MathApp.swift */; };
 		AC1EE3612A57DD8400622438 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1EE3602A57DD8400622438 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		252C65072A5821C70025E048 /* Subject - Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Subject - Reference.swift"; sourceTree = "<group>"; };
 		77874C682A581E2000DE4383 /* TutorialIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntro.swift; sourceTree = "<group>"; };
 		AC1EE35B2A57DD8400622438 /* Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Math.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1EE35E2A57DD8400622438 /* MathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathApp.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		AC1EE35D2A57DD8400622438 /* Math */ = {
 			isa = PBXGroup;
 			children = (
+				252C65072A5821C70025E048 /* Subject - Reference.swift */,
 				AC1EE35E2A57DD8400622438 /* MathApp.swift */,
 				AC1EE3602A57DD8400622438 /* ContentView.swift */,
 				AC1EE36C2A57DEF400622438 /* Splash Screen.swift */,
@@ -156,6 +159,7 @@
 				AC1EE36F2A57E58500622438 /* AuthenticationPage.swift in Sources */,
 				AC927A8E2A58196B003A5D5C /* HomePage.swift in Sources */,
 				252C65062A5815770025E048 /* (null) in Sources */,
+				252C65082A5821C70025E048 /* Subject - Reference.swift in Sources */,
 				AC1EE36D2A57DEF400622438 /* Splash Screen.swift in Sources */,
 				AC1EE3612A57DD8400622438 /* ContentView.swift in Sources */,
 				AC927A902A581A25003A5D5C /* ColorExtension.swift in Sources */,

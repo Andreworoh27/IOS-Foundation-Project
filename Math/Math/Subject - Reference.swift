@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ViewC: View {
+struct SubjectReference: View {
     @State var remainingLives: Int = 3
     @State var Currency: Int = 1000
     @State var showSheet = true
@@ -96,8 +96,8 @@ struct SubjectSheet: View {
 
 
 
-struct ViewC_Previews: PreviewProvider {
+struct SubjectReference_Previews: PreviewProvider {
     static var previews: some View {
-        ViewC()
+        SubjectReference()
     }
 }
