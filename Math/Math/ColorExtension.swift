@@ -1,6 +1,6 @@
 //
-//  ColorExtension.swift
-//  Math
+//  ColorExtend.swift
+//  Test UI
 //
 //  Created by Andrew Oroh on 07/07/23.
 //
