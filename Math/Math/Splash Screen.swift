@@ -11,6 +11,7 @@ struct Splash_Screen: View {
     @State private var isLoading = true
     @State private var loadingValue = 0.00
     @State private var redirectToAuthPage = false
+    @State private var isAnimating = false
 
     var body: some View {
         NavigationView {
@@ -28,7 +29,7 @@ struct Splash_Screen: View {
                         if isLoading {
                             ProgressView(value: loadingValue)
                                 .progressViewStyle(LinearProgressViewStyle())
-                                .animation(.easeInOut(duration: 5.0))
+                                .animation(.easeInOut(duration: 5.0), value: isAnimating)
                             Text("Loading...")
                                 .padding(.top, 10)
                         }
