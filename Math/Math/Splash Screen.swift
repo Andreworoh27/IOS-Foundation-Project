@@ -44,7 +44,7 @@ struct Splash_Screen: View {
                     }
                 )
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
     func startLoading() {
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in

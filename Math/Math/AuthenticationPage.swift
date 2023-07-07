@@ -9,7 +9,10 @@ import SwiftUI
 
 struct AuthenticationPage: View {
     var body: some View {
-        Text("Login Page")
+        VStack{
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
+        
     }
 }
 
