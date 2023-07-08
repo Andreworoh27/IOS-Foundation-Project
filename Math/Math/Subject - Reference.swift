@@ -20,8 +20,7 @@ struct SubjectReference: View {
                         Image(systemName: "heart").foregroundColor(.red)
                         Text("\(remainingLives)")
                     }.frame(width: 100, height: 40)
-                        .background(Color.cyan)
-                        .shadow(color: .gray, radius:3, x: 2, y: 2)
+                        .background(Color.white)
                         .cornerRadius(10)
                     
                     Spacer().frame(width: 100)
@@ -29,13 +28,14 @@ struct SubjectReference: View {
                     HStack{
                         Image(systemName: "dollarsign.circle")
                         Text("\(Currency)")
-                    }.frame(width: 100, height: 40)
-                        .background(Color.pink)
-                        .shadow(color: .gray, radius:3, x: 2, y: 2)
+                    }.frame(width: 120, height: 40)
+                        .background(Color.white)
                         .cornerRadius(10)
                 }.padding(.bottom, 100)
+                    .shadow(color: .gray, radius:3, x: 2, y: 2)
                 HStack{
                     Text("What subject do you want to learn today?")
+                        .font(Font.headline.weight(.bold))
                 }.padding(.bottom, 50)
                 
                 Spacer().frame(height: 30)
@@ -47,14 +47,14 @@ struct SubjectReference: View {
                         .background(Color.blue)
                         .cornerRadius(8)
                 }.padding(.bottom, 100)
-                
                 Spacer().frame(height: 300)
                 
             }.sheet(isPresented: $showSheet){
                 SubjectSheet()
+                    .presentationCornerRadius(50)
                     .presentationDetents([.medium])
                     .presentationBackgroundInteraction(.disabled)
-            }
+            }.frame(width: 400, height: 760).background(Color(hex: "E1F7FE"))
         }
     }
 }
@@ -62,34 +62,67 @@ struct SubjectReference: View {
 struct SubjectSheet: View {
     var body: some View{
         VStack{
-            Button("Subject: Frations") {
-                
-            }.frame(width: 300, height: 70)
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                .shadow(radius:3, x: 2, y: 2)
-            Button("Subject: Function") {
-                
-            }.frame(width: 300, height: 70)
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                .shadow(radius:3, x: 2, y: 2)
-            Button("Subject: Integers") {
-                
-            }.frame(width: 300, height: 70)
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                .shadow(radius:3, x: 2, y: 2)
-            Button("Subject: Algebra") {
-                
-            }.frame(width: 300, height: 70)
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                .shadow(radius:3, x: 2, y: 2)
+            Capsule()
+                .fill(Color.secondary)
+                .frame(width: 70, height: 3)
+                .padding(10)
+                .opacity(0.8)
+            
+            Spacer().frame(height: 20)
+            
+            ZStack{
+                VStack{
+                    HStack{
+                        Button("Subject: Frations") {
+                            
+                        }.frame(width: 300, height: 70)
+                            .background(Color(hex: "FDE8B3"))
+                            .foregroundColor(Color(hex: "474141"))
+                            .cornerRadius(8)
+                            .shadow(radius:3, x: 2, y: 2)
+                    }
+                    
+                    Spacer().frame(height: 20)
+                    
+                    HStack{
+                        Button("Subject: Function") {
+                            
+                        }.frame(width: 300, height: 70)
+                            .background(Color(hex: "FFF59D"))
+                            .foregroundColor(Color(hex: "474141"))
+                            .cornerRadius(8)
+                            .shadow(radius:3, x: 2, y: 2)
+                    }
+                    
+                    Spacer().frame(height: 20)
+                    
+                    HStack{
+                        Button("Subject: Integers") {
+                            
+                        }.frame(width: 300, height: 70)
+                            .background(Color(hex: "FFCA7B"))
+                            .foregroundColor(Color(hex: "474141"))
+                            .cornerRadius(8)
+                            .shadow(radius:3, x: 2, y: 2)
+                    }
+                    
+                    Spacer().frame(height: 20)
+                    
+                    HStack{
+                        Button("Subject: Algebra") {
+                            
+                        }.frame(width: 300, height: 70)
+                            .background(Color(hex: "E7C6A7"))
+                            .foregroundColor(Color(hex: "474141"))
+                            .cornerRadius(8)
+                            .shadow(radius:3, x: 2, y: 2)
+                    }
+                    
+                    Spacer()
+                }
+                Image("PizzaSkater")
+                    .position(x: 320, y: 35)
+            }
         }
     }
 }

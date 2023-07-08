@@ -22,7 +22,11 @@ struct ContentView: View {
             AuthenticationPage().tabItem(){
                 Image(systemName: "person.fill")
             }
+<<<<<<< Updated upstream
         }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
+=======
+        }
+>>>>>>> Stashed changes
     }
 }
 
