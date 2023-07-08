@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView{
-            Splash_Screen().tabItem(){
+            HomePage().tabItem(){
                 Image(systemName: "house.fill")
             }
             SubjectReference().tabItem(){
@@ -22,16 +22,12 @@ struct ContentView: View {
             AuthenticationPage().tabItem(){
                 Image(systemName: "person.fill")
             }
-<<<<<<< Updated upstream
         }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
-=======
-        }
->>>>>>> Stashed changes
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }

@@ -10,41 +10,33 @@ import SwiftUI
 struct Splash_Screen: View {
     @State private var isLoading = true
     @State private var loadingValue = 0.00
-    @State private var redirectToAuthPage = false
-
+    @Binding var isRedirect:Bool
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                ZStack {
-                    Image("SplashScreenBackground")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .edgesIgnoringSafeArea(.all)
+        VStack {
+            ZStack {
+                Image("SplashScreenBackground")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    Image("SpashScreenMascot")
+                        .scaleEffect(0.5)
                     
-                    VStack {
-                        Image("SpashScreenMascot")
-                            .scaleEffect(0.5)
-                        
-                        if isLoading {
-                            ProgressView(value: loadingValue)
-                                .progressViewStyle(LinearProgressViewStyle())
-                                .animation(.easeInOut(duration: 5.0))
-                            Text("Loading...")
-                                .padding(.top, 10)
-                        }
+                    if isLoading {
+                        ProgressView(value: loadingValue)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .animation(.easeInOut(duration: 5.0))
+                        Text("Loading...")
+                            .padding(.top, 10)
                     }
                 }
-                .onAppear {
-                    startLoading()
-                }
-                .navigationBarHidden(true)
-                .background(
-                    NavigationLink(destination: AuthenticationPage(), isActive: $redirectToAuthPage) {
-                        EmptyView()
-                    }
-                )
             }
-        }.navigationBarBackButtonHidden(true)
+            .onAppear {
+                startLoading()
+            }
+        }
     }
     func startLoading() {
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
@@ -52,7 +44,7 @@ struct Splash_Screen: View {
             
             if loadingValue >= 1.0 {
                 timer.invalidate()
-                redirectToAuthPage = true
+                isRedirect = true
             }
         }
         
@@ -60,7 +52,9 @@ struct Splash_Screen: View {
 }
 
 struct Splash_Screen_Previews: PreviewProvider {
+    @State static var isRedirected = false
+    
     static var previews: some View {
-        Splash_Screen()
+        Splash_Screen(isRedirect: $isRedirected)
     }
 }

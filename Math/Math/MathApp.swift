@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct MathApp: App {
+    @State private var redirectToHomePage = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if redirectToHomePage {
+                NavigationView {
+                    HomePage()
+                }
+                .navigationBarBackButtonHidden(true)
+            } else {
+                Splash_Screen(isRedirect: $redirectToHomePage)
+            }
         }
     }
 }
