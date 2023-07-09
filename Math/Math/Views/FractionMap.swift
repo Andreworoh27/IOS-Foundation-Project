@@ -9,13 +9,11 @@ import SwiftUI
 
 struct FractionMap: View {
     @State var user: User
-    @State var levels:[Int] = [1,2,3,4]
+    @State var level: Level
     
     var body: some View {
         ZStack{
-            
             VStack{
-                
                 //navbar
                 VStack{
                     HStack{
@@ -43,12 +41,12 @@ struct FractionMap: View {
                     Text("Introduction : What Is Fractions")
                     Spacer()
                 }
-                    .frame(width: UIScreen.main.bounds.width)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.15)
                     .background(Color(hex: "D9AB80"))
                             
                 //map content
-                VStack{
-                    ForEach(levels, id: \.self) { level in
+                ScrollView{
+                    ForEach(level.subLevelCount, id: \.self) { level in
                         HStack{
                             if(level % 2 == 0){
                                 Spacer()
@@ -76,6 +74,8 @@ struct FractionMap: View {
                     Spacer()
                 }
                 .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height * 0.7)
+                .navigationTitle(level.levelCategory)
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
@@ -83,6 +83,6 @@ struct FractionMap: View {
 
 struct FractionMap_Previews: PreviewProvider {
     static var previews: some View {
-        FractionMap(user:user)
+        FractionMap(user:user, level: level)
     }
 }

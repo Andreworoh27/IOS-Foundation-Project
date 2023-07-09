@@ -9,8 +9,6 @@ import SwiftUI
 import Combine
 
 struct HomePage: View {
-    var user: User
-    
     var body: some View {
         
         NavigationView{
@@ -34,7 +32,7 @@ struct HomePage: View {
                         .padding(.bottom, UIScreen.main.bounds.height * 0.1)
                         .scaleEffect(0.5)
                     
-                    NavigationLink(destination:FractionMap(user:user)){
+                    NavigationLink(destination:FractionMap(user:user, level: level)){
                         Button("\(Image(systemName: "play")) Play") {
                             
                         }
@@ -65,6 +63,6 @@ struct HomePage: View {
 struct HomePage_Previews: PreviewProvider {
 
     static var previews: some View {
-        HomePage(user: user)
+        HomePage()
     }
 }

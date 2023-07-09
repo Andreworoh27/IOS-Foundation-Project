@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBar: View {
     var body: some View {
         TabView {
-            HomePage(user: user).tabItem {
+            HomePage().tabItem {
                 Image(systemName: "house.fill")
             }
             SubjectReference(user: user).tabItem {

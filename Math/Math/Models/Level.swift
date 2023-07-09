@@ -14,4 +14,5 @@ struct Level: Hashable, Codable, Identifiable{
     var title: String
     var description : String
     var currencyReward : Int
+    var subLevelCount: [Int]
 }

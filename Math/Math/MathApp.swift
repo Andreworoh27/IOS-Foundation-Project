@@ -14,7 +14,7 @@ struct MathApp: App {
         WindowGroup {
             if redirectToHomePage {
                 NavigationView {
-                    HomePage(user: user)
+                    HomePage()
                         .navigationBarBackButtonHidden(true)
                 }
             }
