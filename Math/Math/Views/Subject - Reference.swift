@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct SubjectReference: View {
-    @State var remainingLives: Int = 3
-    @State var Currency: Int = 1000
+    @State var user: User
     @State var showSheet = true
     
     var body: some View {
@@ -18,7 +17,7 @@ struct SubjectReference: View {
                 HStack{
                     HStack{
                         Image(systemName: "heart").foregroundColor(.red)
-                        Text("\(remainingLives)")
+                        Text("\(user.life)")
                     }.frame(width: 100, height: 40)
                         .background(Color.white)
                         .cornerRadius(10)
@@ -27,7 +26,7 @@ struct SubjectReference: View {
                     
                     HStack{
                         Image(systemName: "dollarsign.circle")
-                        Text("\(Currency)")
+                        Text("\(user.currency)")
                     }.frame(width: 120, height: 40)
                         .background(Color.white)
                         .cornerRadius(10)
@@ -49,7 +48,8 @@ struct SubjectReference: View {
                 }.padding(.bottom, 100)
                 Spacer().frame(height: 300)
                 
-            }.sheet(isPresented: $showSheet){
+            }
+            .sheet(isPresented: $showSheet){
                 SubjectSheet()
                     .presentationCornerRadius(50)
                     .presentationDetents([.medium])
@@ -73,7 +73,7 @@ struct SubjectSheet: View {
             ZStack{
                 VStack{
                     HStack{
-                        Button("Subject: Frations") {
+                        Button("Subject: Fractions") {
                             
                         }.frame(width: 300, height: 70)
                             .background(Color(hex: "FDE8B3"))
@@ -131,6 +131,6 @@ struct SubjectSheet: View {
 
 struct SubjectReference_Previews: PreviewProvider {
     static var previews: some View {
-        SubjectReference()
+        SubjectReference(user: user)
     }
 }

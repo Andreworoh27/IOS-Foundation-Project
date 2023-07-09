@@ -10,15 +10,15 @@ import SwiftUI
 @main
 struct MathApp: App {
     @State private var redirectToHomePage = false
-    
     var body: some Scene {
         WindowGroup {
             if redirectToHomePage {
                 NavigationView {
                     HomePage()
+                        .navigationBarBackButtonHidden(true)
                 }
-                .navigationBarBackButtonHidden(true)
-            } else {
+            }
+            else {
                 Splash_Screen(isRedirect: $redirectToHomePage)
             }
         }
