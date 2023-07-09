@@ -12,7 +12,7 @@ struct SubjectReference: View {
     @State var showSheet = true
     
     var body: some View {
-        NavigationView(){
+        NavigationView (){
             VStack{
                 HStack{
                     HStack{
@@ -69,6 +69,7 @@ struct SubjectSheet: View {
                 .opacity(0.8)
             
             Spacer().frame(height: 20)
+
             
             ZStack{
                 VStack{
