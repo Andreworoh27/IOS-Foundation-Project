@@ -14,6 +14,8 @@
 		AC19C3A82A5A632500B997B3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A72A5A632500B997B3 /* UserData.swift */; };
 		AC19C3AA2A5A654700B997B3 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A92A5A654700B997B3 /* Level.swift */; };
 		AC19C3AC2A5A659800B997B3 /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3AB2A5A659800B997B3 /* LevelData.swift */; };
+		AC19C3B32A5A9DAE00B997B3 /* ComingSoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3B22A5A9DAE00B997B3 /* ComingSoon.swift */; };
+		AC19C3B52A5AA14700B997B3 /* FractionLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3B42A5AA14700B997B3 /* FractionLevel1.swift */; };
 		AC1EE35F2A57DD8400622438 /* MathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1EE35E2A57DD8400622438 /* MathApp.swift */; };
 		AC1EE3612A57DD8400622438 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1EE3602A57DD8400622438 /* ContentView.swift */; };
 		AC1EE3632A57DD8600622438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1EE3622A57DD8600622438 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		AC19C3A72A5A632500B997B3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AC19C3A92A5A654700B997B3 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		AC19C3AB2A5A659800B997B3 /* LevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
+		AC19C3B22A5A9DAE00B997B3 /* ComingSoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoon.swift; sourceTree = "<group>"; };
+		AC19C3B42A5AA14700B997B3 /* FractionLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractionLevel1.swift; sourceTree = "<group>"; };
 		AC1EE35B2A57DD8400622438 /* Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Math.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1EE35E2A57DD8400622438 /* MathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathApp.swift; sourceTree = "<group>"; };
 		AC1EE3602A57DD8400622438 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,8 +67,9 @@
 				77874C682A581E2000DE4383 /* TutorialIntro.swift */,
 				AC1EE36C2A57DEF400622438 /* Splash Screen.swift */,
 				AC927A8D2A58196B003A5D5C /* HomePage.swift */,
-				AC7561CB2A58FAD500993230 /* FractionMap.swift */,
+				AC19C3AF2A5A9D4300B997B3 /* Fraction */,
 				252C65072A5821C70025E048 /* Subject - Reference.swift */,
+				AC19C3B22A5A9DAE00B997B3 /* ComingSoon.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +90,15 @@
 				AC19C3AB2A5A659800B997B3 /* LevelData.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		AC19C3AF2A5A9D4300B997B3 /* Fraction */ = {
+			isa = PBXGroup;
+			children = (
+				AC7561CB2A58FAD500993230 /* FractionMap.swift */,
+				AC19C3B42A5AA14700B997B3 /* FractionLevel1.swift */,
+			);
+			path = Fraction;
 			sourceTree = "<group>";
 		};
 		AC1EE3522A57DD8400622438 = {
@@ -201,6 +215,7 @@
 				AC7561CC2A58FAD500993230 /* FractionMap.swift in Sources */,
 				252C65062A5815770025E048 /* (null) in Sources */,
 				252C65082A5821C70025E048 /* Subject - Reference.swift in Sources */,
+				AC19C3B32A5A9DAE00B997B3 /* ComingSoon.swift in Sources */,
 				AC1EE36D2A57DEF400622438 /* Splash Screen.swift in Sources */,
 				AC19C3A82A5A632500B997B3 /* UserData.swift in Sources */,
 				AC19C3AC2A5A659800B997B3 /* LevelData.swift in Sources */,
@@ -208,6 +223,7 @@
 				AC927A902A581A25003A5D5C /* ColorExtension.swift in Sources */,
 				77874C692A581E2000DE4383 /* TutorialIntro.swift in Sources */,
 				AC1EE35F2A57DD8400622438 /* MathApp.swift in Sources */,
+				AC19C3B52A5AA14700B997B3 /* FractionLevel1.swift in Sources */,
 				AC19C3A62A5A622F00B997B3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
