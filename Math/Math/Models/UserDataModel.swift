@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct User : Hashable, Codable, Identifiable{
+struct UserDataModel :Identifiable{
     var name: String
-    var id: Int
+    var id = UUID()
     var life: Int
     var currency : Int
     var streak: Int
-    var currentLevel: Int
+    var currentLevelCount: Int
 }
