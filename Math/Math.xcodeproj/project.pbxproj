@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		252C65062A5815770025E048 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		AC19C3A62A5A622F00B997B3 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A52A5A622F00B997B3 /* UserDataModel.swift */; };
-		AC19C3AA2A5A654700B997B3 /* LevelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A92A5A654700B997B3 /* LevelDataModel.swift */; };
+		252C65082A5821C70025E048 /* Subject - Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C65072A5821C70025E048 /* Subject - Reference.swift */; };
+		776C3D4A2A5E8BF50004AB18 /* TutorialIntro2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C3D492A5E8BF50004AB18 /* TutorialIntro2.swift */; };
+		77874C692A581E2000DE4383 /* TutorialIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77874C682A581E2000DE4383 /* TutorialIntro.swift */; };
+		AC19C3A62A5A622F00B997B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A52A5A622F00B997B3 /* User.swift */; };
+		AC19C3A82A5A632500B997B3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A72A5A632500B997B3 /* UserData.swift */; };
+		AC19C3AA2A5A654700B997B3 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A92A5A654700B997B3 /* Level.swift */; };
+		AC19C3AC2A5A659800B997B3 /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3AB2A5A659800B997B3 /* LevelData.swift */; };
 		AC19C3B32A5A9DAE00B997B3 /* ComingSoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3B22A5A9DAE00B997B3 /* ComingSoon.swift */; };
 		AC19C3B52A5AA14700B997B3 /* FractionLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3B42A5AA14700B997B3 /* FractionLevel1.swift */; };
 		AC1EE35F2A57DD8400622438 /* MathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1EE35E2A57DD8400622438 /* MathApp.swift */; };
@@ -30,8 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC19C3A52A5A622F00B997B3 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
-		AC19C3A92A5A654700B997B3 /* LevelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDataModel.swift; sourceTree = "<group>"; };
+		252C65072A5821C70025E048 /* Subject - Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Subject - Reference.swift"; sourceTree = "<group>"; };
+		776C3D492A5E8BF50004AB18 /* TutorialIntro2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntro2.swift; sourceTree = "<group>"; };
+		77874C682A581E2000DE4383 /* TutorialIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntro.swift; sourceTree = "<group>"; };
+		AC19C3A52A5A622F00B997B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC19C3A72A5A632500B997B3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		AC19C3A92A5A654700B997B3 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		AC19C3AB2A5A659800B997B3 /* LevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
 		AC19C3B22A5A9DAE00B997B3 /* ComingSoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoon.swift; sourceTree = "<group>"; };
 		AC19C3B42A5AA14700B997B3 /* FractionLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractionLevel1.swift; sourceTree = "<group>"; };
 		AC1EE35B2A57DD8400622438 /* Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Math.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +78,9 @@
 			children = (
 				AC6AC7602A5BAA2F000483FF /* Utility Template */,
 				AC1EE3602A57DD8400622438 /* ContentView.swift */,
-				AC3C24DA2A5E94A700F9C6CC /* SubjectReference.swift */,
+				AC1EE36E2A57E58500622438 /* AuthenticationPage.swift */,
+				77874C682A581E2000DE4383 /* TutorialIntro.swift */,
+				776C3D492A5E8BF50004AB18 /* TutorialIntro2.swift */,
 				AC1EE36C2A57DEF400622438 /* Splash Screen.swift */,
 				AC19C3AF2A5A9D4300B997B3 /* Fraction */,
 			);
@@ -223,11 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC19C3AA2A5A654700B997B3 /* LevelDataModel.swift in Sources */,
-				AC6AC7952A5C1AB4000483FF /* DataModel.xcdatamodeld in Sources */,
-				AC6AC7622A5BAA83000483FF /* GameMenuStatusBar.swift in Sources */,
-				AC6AC7642A5BD21B000483FF /* InGameStatusBar.swift in Sources */,
-				AC7561CC2A58FAD500993230 /* Game Map.swift in Sources */,
+				AC19C3AA2A5A654700B997B3 /* Level.swift in Sources */,
+				AC1EE36F2A57E58500622438 /* AuthenticationPage.swift in Sources */,
+				AC927A8E2A58196B003A5D5C /* HomePage.swift in Sources */,
+				AC7561CC2A58FAD500993230 /* FractionMap.swift in Sources */,
+				776C3D4A2A5E8BF50004AB18 /* TutorialIntro2.swift in Sources */,
 				252C65062A5815770025E048 /* (null) in Sources */,
 				AC19C3B32A5A9DAE00B997B3 /* ComingSoon.swift in Sources */,
 				AC3C24DB2A5E94A700F9C6CC /* SubjectReference.swift in Sources */,
