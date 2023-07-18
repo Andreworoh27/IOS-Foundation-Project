@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+class SubjectPage : ObservableObject {
+    @Published var subject : Int = 0
+}
+
 struct SubjectReference: View {
     @EnvironmentObject private var dataService:DataSeeder
     @EnvironmentObject var staticData : StaticData
     @State var user : UserDataModel? = nil
     @State var showSheet = true
+    @ObservedObject var subjectPage : SubjectPage = SubjectPage()
+    @State var redirectToGamePage : Bool = false
     
     var body: some View {
         VStack{
@@ -28,6 +34,7 @@ struct SubjectReference: View {
                 HStack{
                     Image(systemName: "dollarsign.circle")
                     Text("\(staticData.userData.currency)")
+                    
                 }.frame(width: 120, height: 40)
                     .background(Color.white)
                     .cornerRadius(10)
@@ -49,16 +56,38 @@ struct SubjectReference: View {
             }.padding(.bottom, 100)
             Spacer().frame(height: 300)
             
+            if subjectPage.subject == 1 {
+                NavigationLink(destination: Game_Map(), isActive: $redirectToGamePage){
+                    EmptyView()
+                }
+                .hidden()
+            }
+            else if subjectPage.subject > 1 {
+                NavigationLink(destination : ComingSoon(),isActive: $redirectToGamePage){
+                }
+            }
+            Spacer()
         }
-        .onAppear{
-            
+        .onAppear(){
+            subjectPage.subject = 0
         }
         .sheet(isPresented: $showSheet){
-            SubjectSheet(user: staticData.userData,subjects: staticData.subjectData)
+            SubjectSheet(user: staticData.userData,subjects: staticData.subjectData, subjectPage: subjectPage)
                 .presentationCornerRadius(50)
                 .presentationDetents([.medium])
                 .presentationBackgroundInteraction(.disabled)
-        }.frame(width: 400, height: 760).background(Color(hex: "E1F7FE"))
+        }
+        .frame(width: 400, height: 760).background(Color(hex: "E1F7FE"))
+        .onChange(of: subjectPage.subject, perform: { newValue in
+            if newValue == 1 {
+                redirectToGamePage = true
+                showSheet = false
+            }
+            else if newValue >= 1 {
+                redirectToGamePage = true
+                showSheet = false
+            }
+        })
     }
 }
 
@@ -66,7 +95,8 @@ struct SubjectSheet: View {
     @State var user:UserDataModel
     @State var subjects: SubjectDataModel
     @Environment(\.dismiss) private var dismiss
-
+    @ObservedObject var subjectPage : SubjectPage
+    
     var body: some View{
         VStack{
             Capsule()
@@ -77,24 +107,25 @@ struct SubjectSheet: View {
             
             Spacer().frame(height: 20)
             
-            
             ZStack{
                 VStack{
-                    NavigationLink(destination: Game_Map()){
-                        
-                        Text("Subject: Fraction")
-                            .frame(width: 300, height: 70)
-                            .background(Color(hex: "FDE8B3"))
-                            .foregroundColor(Color(hex: "474141"))
-                            .cornerRadius(8)
-                            .shadow(radius:3, x: 2, y: 2)
+                    HStack{
+                        Button("Subject: Fraction"){
+                            subjectPage.subject = 1
+                        }
+                        .frame(width: 300, height: 70)
+                        .background(Color(hex: "FDE8B3"))
+                        .foregroundColor(Color(hex: "474141"))
+                        .cornerRadius(8)
+                        .shadow(radius:3, x: 2, y: 2)
                     }
                     
                     Spacer().frame(height: 20)
                     
-                    NavigationLink(destination: Game_Map()){
-                        
+                    
+                    HStack{
                         Button("Subject: Function") {
+                            subjectPage.subject = 2
                         }.frame(width: 300, height: 70)
                             .background(Color(hex: "FFF59D"))
                             .foregroundColor(Color(hex: "474141"))
@@ -106,7 +137,7 @@ struct SubjectSheet: View {
                     
                     HStack{
                         Button("Subject: Integers") {
-                            
+                            subjectPage.subject = 2
                         }.frame(width: 300, height: 70)
                             .background(Color(hex: "FFCA7B"))
                             .foregroundColor(Color(hex: "474141"))
@@ -118,7 +149,7 @@ struct SubjectSheet: View {
                     
                     HStack{
                         Button("Subject: Algebra") {
-                            
+                            subjectPage.subject = 2
                         }.frame(width: 300, height: 70)
                             .background(Color(hex: "E7C6A7"))
                             .foregroundColor(Color(hex: "474141"))

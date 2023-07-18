@@ -45,8 +45,7 @@ struct ContentView: View {
                                 .scaleEffect(0.5)
                             
                             NavigationLink(destination:Game_Map()){
-                                Button("\(Image(systemName: "play")) Play") {
-                                }
+                                Text("\(Image(systemName: "play")) Play")
                                 .frame(width: UIScreen.main.bounds.width * 0.8)
                                 .foregroundColor(Color.black)
                                 .padding()
@@ -55,9 +54,7 @@ struct ContentView: View {
                             }
                             
                             NavigationLink(destination: SubjectReference()){
-                                Button("\(Image(systemName: "map")) Map") {
-                                    
-                                }
+                                Text("\(Image(systemName: "map")) Map")
                                 .frame(width: UIScreen.main.bounds.width * 0.8)
                                 .foregroundColor(Color.black)
                                 .padding()
