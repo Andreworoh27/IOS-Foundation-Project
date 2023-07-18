@@ -29,7 +29,7 @@ struct Game_Map: View {
                         }
                         
                         if level+1 == 1 {
-                            NavigationLink(destination: FractionLevel1()){
+                            NavigationLink(destination: MainView()){
                                 Text("\(level+1)")
                                     .font(.title3)
                                     .foregroundColor(.white)

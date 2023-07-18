@@ -10,28 +10,26 @@ import SwiftUI
 struct MainView: View {
     @State private var isZoomed = false
     @State private var navigateToNextScreen = false
-
+    
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                VStack {
-                    tutorial_Intro(isZoomed: $isZoomed, navigateToNextScreen: $navigateToNextScreen)
-                }
-                
-                if navigateToNextScreen {
-                    TutorialPenguinTalking()
-                        .navigationBarHidden(true)
-                }
+        ZStack {
+            VStack {
+                tutorial_Intro(isZoomed: $isZoomed, navigateToNextScreen: $navigateToNextScreen)
             }
-            .onAppear {
-                withAnimation(Animation.easeInOut(duration: 5.0).delay(2.0)) {
-                    isZoomed = true
-                }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                    navigateToNextScreen = true
-                }
+            
+            if navigateToNextScreen {
+                TutorialPenguinTalking()
+                    .navigationBarHidden(true)
+            }
+        }
+        .onAppear {
+            withAnimation(Animation.easeInOut(duration: 3.0).delay(2.0)) {
+                isZoomed = true
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                navigateToNextScreen = true
             }
         }
     }
@@ -48,19 +46,19 @@ struct tutorial_Intro: View {
                 .resizable()
                 .scaledToFit()
                 .scaleEffect(isZoomed ? 1.5 : 1.3)
-                .animation(Animation.easeInOut(duration: 5.0))
+                .animation(Animation.easeInOut(duration: 3))
                 .offset(x: isZoomed ? 70 : 0, y: isZoomed ? -150 : -35)
-//                .onTapGesture {
-//                    withAnimation {
-//                        isZoomed.toggle()
-//                    }
-//                }
+            //                .onTapGesture {
+            //                    withAnimation {
+            //                        isZoomed.toggle()
+            //                    }
+            //                }
             
             Image("PenguinChef")
                 .resizable()
                 .scaledToFit()
                 .scaleEffect(isZoomed ? 0.3 : 0.18)
-                .animation(Animation.easeInOut(duration: 4.7))
+                .animation(Animation.easeInOut(duration: 2.7))
                 .offset(x: isZoomed ? -60 : -150, y: isZoomed ? 140 : 200)
         }
     }
@@ -95,18 +93,19 @@ struct TutorialPenguinTalking: View {
                     .offset(x: 40, y: 30)
                     .fontWeight(.medium)
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                             withAnimation {
                                 isShowingHiText = false
                             }
                         }
                     }
-            } else if isShowingMarioName {
+            }
+            else if isShowingMarioName {
                 Text("My name is Bubble")
                     .offset(x: 45, y: 30)
                     .fontWeight(.medium)
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                             withAnimation {
                                 isShowingMarioName = false
                                 changepage = true
@@ -114,27 +113,19 @@ struct TutorialPenguinTalking: View {
                         }
                     }
             }
+            
             if changepage {
-                NextPage()
+                NavigationLink(destination: TutorialIntro2(),isActive: $changepage){
+                    //                    Label(" ", image: "home").frame(width: 400, height: 900)
+                    //                        .background(Color.clear)
+                    EmptyView()
+                }
+                .hidden()
+                
             }
         }
     }
 }
-
-struct NextPage: View{
-    
-    var body: some View{
-//        Button(" "){
-            NavigationLink(destination: TutorialIntro2()){
-                Label(" ", image: "home").frame(width: 400, height: 900)
-                    .background(Color.clear)
-            }
-//        }
-
-    }
-}
-
-
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

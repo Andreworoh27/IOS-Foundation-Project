@@ -9,10 +9,10 @@ import SwiftUI
 
 struct TutorialIntro2: View {
     @State private var isVisible = false
+    @State private var isActive = false
+    let timer = Timer.publish(every: 4, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        
-        
         ZStack {
             Image("backgroundwpenguin")
                 .resizable()
@@ -37,14 +37,17 @@ struct TutorialIntro2: View {
                 .animation(.easeInOut(duration: 0.5).delay(0.4))
             
             
-            
+            NavigationLink(destination: FractionLevel1(),isActive: $isActive) {
+            }
+        }
+        .onReceive(timer) { input in
+            isActive = true
         }
         .onAppear{isVisible = true}
-        
     }
     
 }
-    
+
 struct TutorialIntro2_Previews: PreviewProvider {
     static var previews: some View {
         TutorialIntro2()
