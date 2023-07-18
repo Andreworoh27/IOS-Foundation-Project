@@ -11,10 +11,9 @@ struct Splash_Screen: View {
     @EnvironmentObject private var dataSeeder:DataSeeder
     
     @State private var isLoading = true
-    @State private var loadingValue = 0.00
-    @State private var redirectToAuthPage = false
-    @State private var isAnimating = false
-
+    @State private var loadingValue = 0.0
+    @Binding var isRedirect:Bool
+    
     var body: some View {
         VStack {
             ZStack {
@@ -27,17 +26,12 @@ struct Splash_Screen: View {
                     Image("SpashScreenMascot")
                         .scaleEffect(0.5)
                     
-                    VStack {
-                        Image("SpashScreenMascot")
-                            .scaleEffect(0.5)
-                        
-                        if isLoading {
-                            ProgressView(value: loadingValue)
-                                .progressViewStyle(LinearProgressViewStyle())
-                                .animation(.easeInOut(duration: 5.0), value: isAnimating)
-                            Text("Loading...")
-                                .padding(.top, 10)
-                        }
+                    if isLoading {
+                        ProgressView(value: loadingValue)
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .animation(.easeInOut(duration: 5.0))
+                        Text("Loading...")
+                            .padding(.top, 10)
                     }
                 }
             }

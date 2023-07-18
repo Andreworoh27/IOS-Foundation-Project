@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+import SpriteKit
 
-struct FractionLevel1: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct FractionLevel1: UIViewRepresentable {
+    typealias UIViewType = SKView
+
+    func makeUIView(context: Context) -> SKView {
+        let skView = SKView()
+        let scene = GameScene(size: skView.bounds.size) // Initialize your SpriteKit scene
+        skView.presentScene(scene)
+        return skView
     }
+
+    
+    func updateUIView(_ uiView: SKView, context: Context) {
+        // Update the scene or perform any other necessary updates
+    }
+
 }
 
 struct FractionLevel1_Previews: PreviewProvider {

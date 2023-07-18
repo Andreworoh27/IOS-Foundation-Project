@@ -5,27 +5,37 @@
 //  Created by Romington Hydro on 17/07/23.
 //
 
-import Foundation
 import SwiftUI
 import SpriteKit
-import GameplayKit
 
-struct GameView: UIViewRepresentable {
+//struct GameView: UIViewRepresentable {
+//    func makeUIView(context: Context) -> SKView {
+//        let skView = SKView()
+//        return skView
+//
+//
+//    }
+struct GameView: UIViewRepresentable{
+    typealias UIViewType = SKView
+    
     func makeUIView(context: Context) -> SKView {
         let skView = SKView()
+        let scene = GameScene(size: skView.bounds.size) // Initialize your SpriteKit scene
+        skView.presentScene(scene)
         return skView
-    
-    
     }
-
+    
+    
     func updateUIView(_ uiView: SKView, context: Context) {
-        if let scene = GameScene(fileNamed: "GameScene") {
-//            scene.scaleMode = .resizeFill
-            uiView.presentScene(scene)
-        }
+        // Update the scene or perform any other necessary updates
     }
 }
-typealias UIViewType = SKView
+
+struct GameView_Preview : PreviewProvider{
+    static var previews: some View{
+        GameView()
+    }
+}
 
 //struct ContentView: View {
 //    var body: some View {
