@@ -80,7 +80,7 @@ struct InGameStatusBar_Previews: PreviewProvider {
     static var previews: some View {
         @StateObject var staticData: StaticData = StaticData()
 
-        InGameStatusBar(progress: 0, checkpoints: [0.22,0.66,0.95])
+        InGameStatusBar(progress: 0.5, checkpoints: [0.22,0.66,0.95])
             .environmentObject(staticData)
     }
 }

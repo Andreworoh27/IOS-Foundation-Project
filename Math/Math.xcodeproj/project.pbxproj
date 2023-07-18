@@ -41,6 +41,9 @@
 		AC6AC79F2A5C536B000483FF /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC79E2A5C536B000483FF /* DataSeeder.swift */; };
 		AC7561CC2A58FAD500993230 /* Game Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7561CB2A58FAD500993230 /* Game Map.swift */; };
 		AC927A902A581A25003A5D5C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC927A8F2A581A25003A5D5C /* ColorExtension.swift */; };
+		ACA496932A664FAD006DAA59 /* InGameStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC7632A5BD21B000483FF /* InGameStatusBar.swift */; };
+		ACA496942A664FAF006DAA59 /* TutorialIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77874C682A581E2000DE4383 /* TutorialIntro.swift */; };
+		ACA496962A666374006DAA59 /* LevelClearPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA496952A666374006DAA59 /* LevelClearPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,7 @@
 		AC6AC79E2A5C536B000483FF /* DataSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
 		AC7561CB2A58FAD500993230 /* Game Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game Map.swift"; sourceTree = "<group>"; };
 		AC927A8F2A581A25003A5D5C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		ACA496952A666374006DAA59 /* LevelClearPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelClearPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 				AC6AC7612A5BAA83000483FF /* GameMenuStatusBar.swift */,
 				AC6AC7632A5BD21B000483FF /* InGameStatusBar.swift */,
 				AC19C3B22A5A9DAE00B997B3 /* ComingSoon.swift */,
+				ACA496952A666374006DAA59 /* LevelClearPage.swift */,
 			);
 			path = "Utility Template";
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				AC1EE35F2A57DD8400622438 /* MathApp.swift in Sources */,
 				8DB3E19C2A6641E30099EE28 /* PizzaController.swift in Sources */,
 				8DB3E19A2A6641E30099EE28 /* CustomerController.swift in Sources */,
+				ACA496942A664FAF006DAA59 /* TutorialIntro.swift in Sources */,
 				AC19C3B52A5AA14700B997B3 /* FractionLevel1.swift in Sources */,
 				8DB3E19E2A6641E30099EE28 /* AppDelegate.swift in Sources */,
 				AC6AC79A2A5C51B5000483FF /* SubjectDataModel.swift in Sources */,
@@ -336,6 +342,8 @@
 				8DB3E1962A6641E30099EE28 /* CustomerModel.swift in Sources */,
 				8D0587992A651E0A00B9703D /* UserDataModel.swift in Sources */,
 				8DB3E19F2A6641E30099EE28 /* GameScene.swift in Sources */,
+				ACA496962A666374006DAA59 /* LevelClearPage.swift in Sources */,
+				ACA496932A664FAD006DAA59 /* InGameStatusBar.swift in Sources */,
 				AC3C24D82A5E92C100F9C6CC /* StaticData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

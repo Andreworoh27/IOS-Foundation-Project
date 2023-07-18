@@ -8,25 +8,58 @@
 import SwiftUI
 import SpriteKit
 
-struct FractionLevel1: UIViewRepresentable {
-    typealias UIViewType = SKView
+class ProgressValue: ObservableObject {
+    @Published var progress: Double = 0.0
+}
 
-    func makeUIView(context: Context) -> SKView {
-        let skView = SKView()
-        let scene = GameScene(size: skView.bounds.size) // Initialize your SpriteKit scene
-        skView.presentScene(scene)
-        return skView
+
+struct FractionLevel1 : View{
+    @EnvironmentObject var staticData : StaticData
+    @ObservedObject var progressValue : ProgressValue = ProgressValue()
+    @State private var levelClear = false
+
+        
+    var scene : SKScene{
+        let scene : GameScene = SKScene(fileNamed: "GameScene") as! GameScene
+        scene.progressValue = progressValue
+        scene.size = CGSize(width: 414, height:896)
+        scene.scaleMode = .fill
+        return scene
     }
-
     
-    func updateUIView(_ uiView: SKView, context: Context) {
-        // Update the scene or perform any other necessary updates
-    }
+    var body: some View{
+        ZStack{
+            SpriteView(scene: scene)
+                .frame(width: 414, height:896)
+                .ignoresSafeArea()
+            VStack{
+                InGameStatusBar(progress: progressValue.progress, checkpoints: [0.5,0.97])
+                    .environmentObject(staticData)
+                Spacer()
+            }
+            NavigationLink(destination: LevelClearPage(), isActive: $levelClear) {
+                EmptyView()
+            }
+            .hidden()
 
+        }
+        .navigationBarBackButtonHidden(true)
+        .onAppear{
+            progressValue.progress = 0.0
+        }
+        .onChange(of: progressValue.progress) { newValue in
+            if newValue == 1.0{
+                levelClear = true
+            }
+        }
+    }
 }
 
 struct FractionLevel1_Previews: PreviewProvider {
     static var previews: some View {
+        @StateObject var staticData: StaticData = StaticData()
         FractionLevel1()
+            .environmentObject(staticData)
     }
 }
+

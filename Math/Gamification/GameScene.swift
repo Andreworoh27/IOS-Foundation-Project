@@ -4,7 +4,7 @@
 //
 //  Created by Andrew Oroh on 14/07/23.
 //
-
+import SwiftUI
 import SpriteKit
 import GameplayKit
 
@@ -16,20 +16,11 @@ class GameScene: SKScene {
     private var customerController: CustomerController!
     private var buttonController: ButtonController!
     private var dragItemController:DragItemController!
-    var progressValue: Double = 0
+    var progressValue: ProgressValue = ProgressValue()
     private var progressBar: SKShapeNode!
 
 
     override func didMove(to view: SKView) {
-        // Create the progress bar
-        let progressBarWidth: CGFloat = 200
-        let progressBarHeight: CGFloat = 20
-        let progressBarRect = CGRect(x: -progressBarWidth/2, y: size.height - progressBarHeight - 10, width: progressBarWidth, height: progressBarHeight)
-        progressBar = SKShapeNode(rect: progressBarRect, cornerRadius: progressBarHeight/2)
-        progressBar.fillColor = SKColor.green
-        progressBar.strokeColor = SKColor.clear
-        addChild(progressBar)
-        
         print(#function)
         // Enable user interaction for the scene
         self.isUserInteractionEnabled = true
@@ -128,7 +119,7 @@ class GameScene: SKScene {
         // Check if any pizza node was tapped
         for pizzaNode in pizzaController.allPizzaNodes {
             if pizzaNode.contains(location) {
-                dragItemController.checkPizzaDropZone(scene: self, pizzaController: pizzaController,customerController: customerController ,pizzaNode: pizzaNode,progressValue:  &progressValue)
+                dragItemController.checkPizzaDropZone(scene: self, pizzaController: pizzaController,customerController: customerController ,pizzaNode: pizzaNode,progressValue: progressValue)
                 print(progressValue)
                 break
             }
@@ -139,16 +130,6 @@ class GameScene: SKScene {
         // Reset the initial touch position
         initialTouchPosition = nil
         currentlyTapPizza = ""
-        updateProgressBar()
-    }
-    
-    private func updateProgressBar() {
-        let stageWidth = progressBar.frame.width / 3
-        let currentStage = Int(progressValue * 3) // Assuming progressValue ranges from 0 to 1
-        
-        // Calculate the width of the progress bar based on the current stage
-        let progressWidth = stageWidth * CGFloat(currentStage)
-        progressBar.xScale = progressWidth / progressBar.frame.width
     }
 }
 

@@ -52,7 +52,7 @@ class DragItemController{
         
     }
     
-    func checkPizzaDropZone(scene: SKScene, pizzaController : PizzaController, customerController:CustomerController, pizzaNode : SKSpriteNode,progressValue: inout Double){
+    func checkPizzaDropZone(scene: SKScene, pizzaController : PizzaController, customerController:CustomerController, pizzaNode : SKSpriteNode,progressValue: ProgressValue){
         let pizzaModel = pizzaController.allPizzaModels.first(where: { $0.name == pizzaNode.name })
         
         // Check if the pizza is inside the drop zone
@@ -66,7 +66,7 @@ class DragItemController{
                 pizzaNode.removeFromParent()
                 dropZone1.removeFromParent()
                 print("points + 500")
-                progressValue += 0.5
+                progressValue.progress += 0.5
             }
             else{
                 print("Invalid Requierment")
@@ -84,7 +84,7 @@ class DragItemController{
                 pizzaNode.removeFromParent()
                 dropZone2.removeFromParent()
                 print("points + 500")
-                progressValue += 0.5
+                progressValue.progress += 0.5
             }
             else{
                 print("Invalid Requierment")
