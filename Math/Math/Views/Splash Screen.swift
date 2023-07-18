@@ -11,7 +11,7 @@ struct Splash_Screen: View {
     @EnvironmentObject private var dataSeeder:DataSeeder
     
     @State private var isLoading = true
-    @State private var loadingValue = 0.00
+    @State private var loadingValue = 0.0
     @Binding var isRedirect:Bool
     
     var body: some View {

@@ -1,12 +1,11 @@
 //
-//  User.swift
+//  UserDataModel.swift
 //  Math
 //
-//  Created by Andrew Oroh on 09/07/23.
+//  Created by Romington Hydro on 17/07/23.
 //
 
 import Foundation
-
 struct UserDataModel :Identifiable{
     var name: String
     var id = UUID()

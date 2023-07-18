@@ -1,8 +1,8 @@
 //
 //  SubjectReference.swift
-//  Testing
+//  Math
 //
-//  Created by Andrew Oroh on 11/07/23.
+//  Created by Romington Hydro on 17/07/23.
 //
 
 import SwiftUI
@@ -145,3 +145,4 @@ struct SubjectReference_Previews: PreviewProvider {
             .environmentObject(staticData)
     }
 }
+

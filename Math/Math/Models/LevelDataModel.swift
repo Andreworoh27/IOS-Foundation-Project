@@ -1,8 +1,8 @@
 //
-//  Level.swift
+//  LevelDataModel.swift
 //  Math
 //
-//  Created by Andrew Oroh on 09/07/23.
+//  Created by Romington Hydro on 17/07/23.
 //
 
 import Foundation
@@ -16,3 +16,4 @@ struct LevelDataModel: Identifiable{
     var levelDescription : String
     var currencyReward : Int
 }
+

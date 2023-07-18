@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		252C65062A5815770025E048 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		252C65082A5821C70025E048 /* Subject - Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C65072A5821C70025E048 /* Subject - Reference.swift */; };
 		776C3D4A2A5E8BF50004AB18 /* TutorialIntro2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C3D492A5E8BF50004AB18 /* TutorialIntro2.swift */; };
-		77874C692A581E2000DE4383 /* TutorialIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77874C682A581E2000DE4383 /* TutorialIntro.swift */; };
-		AC19C3A62A5A622F00B997B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A52A5A622F00B997B3 /* User.swift */; };
-		AC19C3A82A5A632500B997B3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A72A5A632500B997B3 /* UserData.swift */; };
-		AC19C3AA2A5A654700B997B3 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3A92A5A654700B997B3 /* Level.swift */; };
-		AC19C3AC2A5A659800B997B3 /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3AB2A5A659800B997B3 /* LevelData.swift */; };
+		8D0587992A651E0A00B9703D /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0587982A651E0A00B9703D /* UserDataModel.swift */; };
+		8D05879B2A651E3100B9703D /* LevelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D05879A2A651E3100B9703D /* LevelDataModel.swift */; };
+		8D27B4A02A6507FA00D92B68 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D27B49F2A6507FA00D92B68 /* GameView.swift */; };
+		8DB3E17B2A663CC00099EE28 /* SubjectReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E17A2A663CC00099EE28 /* SubjectReference.swift */; };
+		8DB3E17C2A663E5C0099EE28 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC7932A5C1AB4000483FF /* DataModel.xcdatamodeld */; };
+		8DB3E17D2A6640600099EE28 /* GameMenuStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC7612A5BAA83000483FF /* GameMenuStatusBar.swift */; };
+		8DB3E1922A6641E30099EE28 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E17F2A6641E30099EE28 /* GameViewController.swift */; };
+		8DB3E1942A6641E30099EE28 /* ObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E1822A6641E30099EE28 /* ObjectNode.swift */; };
+		8DB3E1952A6641E30099EE28 /* PizzaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E1832A6641E30099EE28 /* PizzaModel.swift */; };
+		8DB3E1962A6641E30099EE28 /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E1842A6641E30099EE28 /* CustomerModel.swift */; };
+		8DB3E1972A6641E30099EE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3E1852A6641E30099EE28 /* LaunchScreen.storyboard */; };
+		8DB3E1982A6641E30099EE28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3E1872A6641E30099EE28 /* Main.storyboard */; };
+		8DB3E1992A6641E30099EE28 /* ButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E18A2A6641E30099EE28 /* ButtonController.swift */; };
+		8DB3E19A2A6641E30099EE28 /* CustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E18B2A6641E30099EE28 /* CustomerController.swift */; };
+		8DB3E19B2A6641E30099EE28 /* DragItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E18C2A6641E30099EE28 /* DragItemController.swift */; };
+		8DB3E19C2A6641E30099EE28 /* PizzaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E18D2A6641E30099EE28 /* PizzaController.swift */; };
+		8DB3E19D2A6641E30099EE28 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3E18E2A6641E30099EE28 /* GameScene.sks */; };
+		8DB3E19E2A6641E30099EE28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E18F2A6641E30099EE28 /* AppDelegate.swift */; };
+		8DB3E19F2A6641E30099EE28 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3E1902A6641E30099EE28 /* GameScene.swift */; };
+		8DB3E1A02A6641E30099EE28 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3E1912A6641E30099EE28 /* Actions.sks */; };
 		AC19C3B32A5A9DAE00B997B3 /* ComingSoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3B22A5A9DAE00B997B3 /* ComingSoon.swift */; };
 		AC19C3B52A5AA14700B997B3 /* FractionLevel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19C3B42A5AA14700B997B3 /* FractionLevel1.swift */; };
 		AC1EE35F2A57DD8400622438 /* MathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1EE35E2A57DD8400622438 /* MathApp.swift */; };
@@ -23,10 +36,6 @@
 		AC1EE3662A57DD8600622438 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1EE3652A57DD8600622438 /* Preview Assets.xcassets */; };
 		AC1EE36D2A57DEF400622438 /* Splash Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1EE36C2A57DEF400622438 /* Splash Screen.swift */; };
 		AC3C24D82A5E92C100F9C6CC /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C24D72A5E92C100F9C6CC /* StaticData.swift */; };
-		AC3C24DB2A5E94A700F9C6CC /* SubjectReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C24DA2A5E94A700F9C6CC /* SubjectReference.swift */; };
-		AC6AC7622A5BAA83000483FF /* GameMenuStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC7612A5BAA83000483FF /* GameMenuStatusBar.swift */; };
-		AC6AC7642A5BD21B000483FF /* InGameStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC7632A5BD21B000483FF /* InGameStatusBar.swift */; };
-		AC6AC7952A5C1AB4000483FF /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC7932A5C1AB4000483FF /* DataModel.xcdatamodeld */; };
 		AC6AC79A2A5C51B5000483FF /* SubjectDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC7992A5C51B5000483FF /* SubjectDataModel.swift */; };
 		AC6AC79D2A5C52B2000483FF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC79C2A5C52B2000483FF /* DataController.swift */; };
 		AC6AC79F2A5C536B000483FF /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AC79E2A5C536B000483FF /* DataSeeder.swift */; };
@@ -35,13 +44,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		252C65072A5821C70025E048 /* Subject - Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Subject - Reference.swift"; sourceTree = "<group>"; };
 		776C3D492A5E8BF50004AB18 /* TutorialIntro2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntro2.swift; sourceTree = "<group>"; };
 		77874C682A581E2000DE4383 /* TutorialIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialIntro.swift; sourceTree = "<group>"; };
-		AC19C3A52A5A622F00B997B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AC19C3A72A5A632500B997B3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		AC19C3A92A5A654700B997B3 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
-		AC19C3AB2A5A659800B997B3 /* LevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
+		8D0587982A651E0A00B9703D /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		8D05879A2A651E3100B9703D /* LevelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDataModel.swift; sourceTree = "<group>"; };
+		8D27B49F2A6507FA00D92B68 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		8DB3E17A2A663CC00099EE28 /* SubjectReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubjectReference.swift; path = Math/Views/Fraction/SubjectReference.swift; sourceTree = SOURCE_ROOT; };
+		8DB3E17F2A6641E30099EE28 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8DB3E1822A6641E30099EE28 /* ObjectNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectNode.swift; sourceTree = "<group>"; };
+		8DB3E1832A6641E30099EE28 /* PizzaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaModel.swift; sourceTree = "<group>"; };
+		8DB3E1842A6641E30099EE28 /* CustomerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
+		8DB3E1862A6641E30099EE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8DB3E1882A6641E30099EE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8DB3E18A2A6641E30099EE28 /* ButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonController.swift; sourceTree = "<group>"; };
+		8DB3E18B2A6641E30099EE28 /* CustomerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerController.swift; sourceTree = "<group>"; };
+		8DB3E18C2A6641E30099EE28 /* DragItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragItemController.swift; sourceTree = "<group>"; };
+		8DB3E18D2A6641E30099EE28 /* PizzaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaController.swift; sourceTree = "<group>"; };
+		8DB3E18E2A6641E30099EE28 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		8DB3E18F2A6641E30099EE28 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8DB3E1902A6641E30099EE28 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8DB3E1912A6641E30099EE28 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		AC19C3B22A5A9DAE00B997B3 /* ComingSoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoon.swift; sourceTree = "<group>"; };
 		AC19C3B42A5AA14700B997B3 /* FractionLevel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractionLevel1.swift; sourceTree = "<group>"; };
 		AC1EE35B2A57DD8400622438 /* Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Math.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,16 +95,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D27B49C2A65073900D92B68 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AC3C24DA2A5E94A700F9C6CC /* SubjectReference.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		8DB3E17E2A6641E30099EE28 /* Gamification */ = {
+			isa = PBXGroup;
+			children = (
+				8DB3E17F2A6641E30099EE28 /* GameViewController.swift */,
+				8DB3E1812A6641E30099EE28 /* Models */,
+				8DB3E1852A6641E30099EE28 /* LaunchScreen.storyboard */,
+				8DB3E1872A6641E30099EE28 /* Main.storyboard */,
+				8DB3E1892A6641E30099EE28 /* Controller */,
+				8DB3E18E2A6641E30099EE28 /* GameScene.sks */,
+				8DB3E18F2A6641E30099EE28 /* AppDelegate.swift */,
+				8DB3E1902A6641E30099EE28 /* GameScene.swift */,
+				8DB3E1912A6641E30099EE28 /* Actions.sks */,
+			);
+			path = Gamification;
+			sourceTree = "<group>";
+		};
+		8DB3E1812A6641E30099EE28 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DB3E1822A6641E30099EE28 /* ObjectNode.swift */,
+				8DB3E1832A6641E30099EE28 /* PizzaModel.swift */,
+				8DB3E1842A6641E30099EE28 /* CustomerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DB3E1892A6641E30099EE28 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8DB3E18A2A6641E30099EE28 /* ButtonController.swift */,
+				8DB3E18B2A6641E30099EE28 /* CustomerController.swift */,
+				8DB3E18C2A6641E30099EE28 /* DragItemController.swift */,
+				8DB3E18D2A6641E30099EE28 /* PizzaController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AC19C3A22A5A616200B997B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AC6AC7602A5BAA2F000483FF /* Utility Template */,
 				AC1EE3602A57DD8400622438 /* ContentView.swift */,
-				AC1EE36E2A57E58500622438 /* AuthenticationPage.swift */,
 				77874C682A581E2000DE4383 /* TutorialIntro.swift */,
 				776C3D492A5E8BF50004AB18 /* TutorialIntro2.swift */,
 				AC1EE36C2A57DEF400622438 /* Splash Screen.swift */,
 				AC19C3AF2A5A9D4300B997B3 /* Fraction */,
+				8D27B49F2A6507FA00D92B68 /* GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,9 +159,9 @@
 			children = (
 				AC6AC7932A5C1AB4000483FF /* DataModel.xcdatamodeld */,
 				AC3C24D72A5E92C100F9C6CC /* StaticData.swift */,
-				AC19C3A52A5A622F00B997B3 /* UserDataModel.swift */,
-				AC19C3A92A5A654700B997B3 /* LevelDataModel.swift */,
 				AC6AC7992A5C51B5000483FF /* SubjectDataModel.swift */,
+				8D0587982A651E0A00B9703D /* UserDataModel.swift */,
+				8D05879A2A651E3100B9703D /* LevelDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				AC19C3B42A5AA14700B997B3 /* FractionLevel1.swift */,
+				8DB3E17A2A663CC00099EE28 /* SubjectReference.swift */,
 			);
 			path = Fraction;
 			sourceTree = "<group>";
@@ -110,8 +178,10 @@
 		AC1EE3522A57DD8400622438 = {
 			isa = PBXGroup;
 			children = (
+				8DB3E17E2A6641E30099EE28 /* Gamification */,
 				AC1EE35D2A57DD8400622438 /* Math */,
 				AC1EE35C2A57DD8400622438 /* Products */,
+				8D27B49C2A65073900D92B68 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,7 +293,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB3E1A02A6641E30099EE28 /* Actions.sks in Resources */,
 				AC1EE3662A57DD8600622438 /* Preview Assets.xcassets in Resources */,
+				8DB3E1982A6641E30099EE28 /* Main.storyboard in Resources */,
+				8DB3E1972A6641E30099EE28 /* LaunchScreen.storyboard in Resources */,
+				8DB3E19D2A6641E30099EE28 /* GameScene.sks in Resources */,
 				AC1EE3632A57DD8600622438 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,28 +309,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC19C3AA2A5A654700B997B3 /* Level.swift in Sources */,
-				AC1EE36F2A57E58500622438 /* AuthenticationPage.swift in Sources */,
-				AC927A8E2A58196B003A5D5C /* HomePage.swift in Sources */,
-				AC7561CC2A58FAD500993230 /* FractionMap.swift in Sources */,
+				8DB3E17C2A663E5C0099EE28 /* DataModel.xcdatamodeld in Sources */,
+				AC7561CC2A58FAD500993230 /* Game Map.swift in Sources */,
 				776C3D4A2A5E8BF50004AB18 /* TutorialIntro2.swift in Sources */,
-				252C65062A5815770025E048 /* (null) in Sources */,
+				8DB3E1992A6641E30099EE28 /* ButtonController.swift in Sources */,
 				AC19C3B32A5A9DAE00B997B3 /* ComingSoon.swift in Sources */,
-				AC3C24DB2A5E94A700F9C6CC /* SubjectReference.swift in Sources */,
+				8DB3E1942A6641E30099EE28 /* ObjectNode.swift in Sources */,
+				8DB3E1952A6641E30099EE28 /* PizzaModel.swift in Sources */,
+				8D05879B2A651E3100B9703D /* LevelDataModel.swift in Sources */,
+				8D27B4A02A6507FA00D92B68 /* GameView.swift in Sources */,
 				AC6AC79F2A5C536B000483FF /* DataSeeder.swift in Sources */,
 				AC6AC79D2A5C52B2000483FF /* DataController.swift in Sources */,
+				8DB3E1922A6641E30099EE28 /* GameViewController.swift in Sources */,
 				AC1EE36D2A57DEF400622438 /* Splash Screen.swift in Sources */,
+				8DB3E19B2A6641E30099EE28 /* DragItemController.swift in Sources */,
 				AC1EE3612A57DD8400622438 /* ContentView.swift in Sources */,
+				8DB3E17D2A6640600099EE28 /* GameMenuStatusBar.swift in Sources */,
 				AC927A902A581A25003A5D5C /* ColorExtension.swift in Sources */,
 				AC1EE35F2A57DD8400622438 /* MathApp.swift in Sources */,
+				8DB3E19C2A6641E30099EE28 /* PizzaController.swift in Sources */,
+				8DB3E19A2A6641E30099EE28 /* CustomerController.swift in Sources */,
 				AC19C3B52A5AA14700B997B3 /* FractionLevel1.swift in Sources */,
+				8DB3E19E2A6641E30099EE28 /* AppDelegate.swift in Sources */,
 				AC6AC79A2A5C51B5000483FF /* SubjectDataModel.swift in Sources */,
-				AC19C3A62A5A622F00B997B3 /* UserDataModel.swift in Sources */,
+				8DB3E17B2A663CC00099EE28 /* SubjectReference.swift in Sources */,
+				8DB3E1962A6641E30099EE28 /* CustomerModel.swift in Sources */,
+				8D0587992A651E0A00B9703D /* UserDataModel.swift in Sources */,
+				8DB3E19F2A6641E30099EE28 /* GameScene.swift in Sources */,
 				AC3C24D82A5E92C100F9C6CC /* StaticData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8DB3E1852A6641E30099EE28 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DB3E1862A6641E30099EE28 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8DB3E1872A6641E30099EE28 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DB3E1882A6641E30099EE28 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AC1EE3672A57DD8600622438 /* Debug */ = {
