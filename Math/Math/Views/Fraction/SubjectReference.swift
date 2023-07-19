@@ -127,7 +127,7 @@ struct SubjectSheet: View {
                         Button("Subject: Function") {
                             subjectPage.subject = 2
                         }.frame(width: 300, height: 70)
-                            .background(Color(hex: "FFF59D"))
+                            
                             .foregroundColor(Color(hex: "474141"))
                             .cornerRadius(8)
                             .shadow(radius:3, x: 2, y: 2)
