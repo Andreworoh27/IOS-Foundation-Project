@@ -98,70 +98,71 @@ struct SubjectSheet: View {
     @ObservedObject var subjectPage : SubjectPage
     
     var body: some View{
-        VStack{
-            Capsule()
-                .fill(Color.secondary)
-                .frame(width: 70, height: 3)
-                .padding(10)
-                .opacity(0.8)
+        
+        Capsule()
+            .fill(Color.secondary)
+            .frame(width: 70, height: 3)
+            .padding(10)
+            .opacity(0.8)
+        
+        Image("PizzaSkater")
+            .position(x: 320, y: 110)
+            .zIndex(2)
+        
+        Spacer().frame(height: 20)
+        
+        ZStack{
             
-            Spacer().frame(height: 20)
-            
-            ZStack{
-                VStack{
-                    HStack{
-                        Button("Subject: Fraction"){
-                            subjectPage.subject = 1
-                        }
-                        .frame(width: 300, height: 70)
-                        .background(Color(hex: "FDE8B3"))
+            VStack{
+                HStack{
+                    Button("Subject: Fraction"){
+                        subjectPage.subject = 1
+                    }
+                    .frame(width: 300, height: 70)
+                    .background(Color(hex: "FDE8B3"))
+                    .foregroundColor(Color(hex: "474141"))
+                    .cornerRadius(8)
+                    .shadow(radius:3, x: 2, y: 2)
+                }
+                
+                Spacer().frame(height: 20)
+                
+                
+                HStack{
+                    Button("Subject: Function") {
+                        subjectPage.subject = 2
+                    }.frame(width: 300, height: 70)
+                        .background(Color(hex: "FFF59D"))
                         .foregroundColor(Color(hex: "474141"))
                         .cornerRadius(8)
                         .shadow(radius:3, x: 2, y: 2)
-                    }
-                    
-                    Spacer().frame(height: 20)
-                    
-                    
-                    HStack{
-                        Button("Subject: Function") {
-                            subjectPage.subject = 2
-                        }.frame(width: 300, height: 70)
-                            .background(Color(hex: "FFF59D"))
-                            .foregroundColor(Color(hex: "474141"))
-                            .cornerRadius(8)
-                            .shadow(radius:3, x: 2, y: 2)
-                    }
-                    
-                    Spacer().frame(height: 20)
-                    
-                    HStack{
-                        Button("Subject: Integers") {
-                            subjectPage.subject = 2
-                        }.frame(width: 300, height: 70)
-                            .background(Color(hex: "FFCA7B"))
-                            .foregroundColor(Color(hex: "474141"))
-                            .cornerRadius(8)
-                            .shadow(radius:3, x: 2, y: 2)
-                    }
-                    
-                    Spacer().frame(height: 20)
-                    
-                    HStack{
-                        Button("Subject: Algebra") {
-                            subjectPage.subject = 2
-                        }.frame(width: 300, height: 70)
-                            .background(Color(hex: "E7C6A7"))
-                            .foregroundColor(Color(hex: "474141"))
-                            .cornerRadius(8)
-                            .shadow(radius:3, x: 2, y: 2)
-                    }
-                    
-                    Spacer()
                 }
-                //                Image("PizzaSkater")
-                //                    .position(x: 320, y: 35)
-                //                    .background(Color.blue)
+                
+                Spacer().frame(height: 20)
+                
+                HStack{
+                    Button("Subject: Integers") {
+                        subjectPage.subject = 2
+                    }.frame(width: 300, height: 70)
+                        .background(Color(hex: "FFCA7B"))
+                        .foregroundColor(Color(hex: "474141"))
+                        .cornerRadius(8)
+                        .shadow(radius:3, x: 2, y: 2)
+                }
+                
+                Spacer().frame(height: 20)
+                
+                HStack{
+                    Button("Subject: Algebra") {
+                        subjectPage.subject = 2
+                    }.frame(width: 300, height: 70)
+                        .background(Color(hex: "E7C6A7"))
+                        .foregroundColor(Color(hex: "474141"))
+                        .cornerRadius(8)
+                        .shadow(radius:3, x: 2, y: 2)
+                }
+                
+                Spacer()
             }
         }
     }
