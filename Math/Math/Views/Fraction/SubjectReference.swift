@@ -136,46 +136,19 @@ struct SubjectSheet: View {
                         .foregroundColor(Color(hex: "474141"))
                         .cornerRadius(8)
                         .shadow(radius:3, x: 2, y: 2)
-                    }
+                }
+                
+                Spacer().frame(height: 20)
+                
+                
+                HStack{
+                    Button("Subject: Function") {
+                        subjectPage.subject = 2
+                    }.frame(width: 300, height: 70)
                     
-                    Spacer().frame(height: 20)
-                    
-                    
-                    HStack{
-                        Button("Subject: Function") {
-                            subjectPage.subject = 2
-                        }.frame(width: 300, height: 70)
-                            
-                            .foregroundColor(Color(hex: "474141"))
-                            .cornerRadius(8)
-                            .shadow(radius:3, x: 2, y: 2)
-                    }
-                    
-                    Spacer().frame(height: 20)
-                    
-                    HStack{
-                        Button("Subject: Integers") {
-                            subjectPage.subject = 2
-                        }.frame(width: 300, height: 70)
-                            .background(Color(hex: "FFCA7B"))
-                            .foregroundColor(Color(hex: "474141"))
-                            .cornerRadius(8)
-                            .shadow(radius:3, x: 2, y: 2)
-                    }
-                    
-                    Spacer().frame(height: 20)
-                    
-                    HStack{
-                        Button("Subject: Algebra") {
-                            subjectPage.subject = 2
-                        }.frame(width: 300, height: 70)
-                            .background(Color(hex: "E7C6A7"))
-                            .foregroundColor(Color(hex: "474141"))
-                            .cornerRadius(8)
-                            .shadow(radius:3, x: 2, y: 2)
-                    }
-                    
-                    Spacer()
+                        .foregroundColor(Color(hex: "474141"))
+                        .cornerRadius(8)
+                        .shadow(radius:3, x: 2, y: 2)
                 }
                 
                 Spacer().frame(height: 20)
@@ -204,6 +177,32 @@ struct SubjectSheet: View {
                 
                 Spacer()
             }
+            
+            Spacer().frame(height: 20)
+            
+            HStack{
+                Button("Subject: Integers") {
+                    subjectPage.subject = 2
+                }.frame(width: 300, height: 70)
+                    .background(Color(hex: "FFCA7B"))
+                    .foregroundColor(Color(hex: "474141"))
+                    .cornerRadius(8)
+                    .shadow(radius:3, x: 2, y: 2)
+            }
+            
+            Spacer().frame(height: 20)
+            
+            HStack{
+                Button("Subject: Algebra") {
+                    subjectPage.subject = 2
+                }.frame(width: 300, height: 70)
+                    .background(Color(hex: "E7C6A7"))
+                    .foregroundColor(Color(hex: "474141"))
+                    .cornerRadius(8)
+                    .shadow(radius:3, x: 2, y: 2)
+            }
+            
+            Spacer()
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct TutorialIntro2: View {
     @State private var isVisible = false
     @State private var isActive = false
-    let timer = Timer.publish(every: 4, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {

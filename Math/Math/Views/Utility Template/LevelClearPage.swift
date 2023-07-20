@@ -170,6 +170,7 @@ struct LevelClearPage: View {
                 FallingStarView()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
     struct LevelClearPage_Previews: PreviewProvider {
         static var previews: some View {
