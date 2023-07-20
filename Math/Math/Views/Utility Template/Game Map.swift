@@ -16,49 +16,61 @@ struct Game_Map: View {
     @FetchRequest(sortDescriptors: []) var levels: FetchedResults<LevelData>
     
     var body: some View {
-        VStack{
-            GameMenuStatusBar()
-            
-            //map content
-            ScrollView{
-                ForEach(0..<Int((staticData.subjectData.subjectLevelCount ))) { level in
-                    HStack{
-                        if(level % 2 == 0){
-                            Spacer()
-                                .frame(width: UIScreen.main.bounds.width * 0.5)
-                        }
-                        
-                        if level+1 == 1 {
-                            NavigationLink(destination: MainView()){
-                                Text("\(level+1)")
-                                    .font(.title3)
-                                    .foregroundColor(.white)
-                                    .frame(width: UIScreen.main.bounds.width * 0.15, height: UIScreen.main.bounds.width * 0.15)
-                                    .background(Color(hex: "9C3434"))
-                                    .clipShape(Circle())
-                                    .padding()
+        ZStack{
+            Image("FractionMapBG")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 800)
+                .offset(y:70)
+            VStack{
+                
+                GameMenuStatusBar()
+                
+                //map content
+                ScrollView{
+                    ForEach(0..<Int((staticData.subjectData.subjectLevelCount ))) { level in
+                        HStack{
+                            if(level % 2 == 1){
+                                Spacer()
+                                    .frame(width: UIScreen.main.bounds.width * 0.5)
                             }
-                        }
-                        else {
-                            NavigationLink(destination: ComingSoon()){
-                                Text("\(level+1)")
-                                    .font(.title3)
-                                    .foregroundColor(.white)
-                                    .frame(width: UIScreen.main.bounds.width * 0.15, height: UIScreen.main.bounds.width * 0.15)
-                                    .background(Color(hex: "9C3434"))
-                                    .clipShape(Circle())
-                                    .padding()
+                            
+                            if level+1 == 1 {
+                                NavigationLink(destination: MainView()){
+                                    Text("\(level+1)")
+                                        .font(.title3)
+                                        .foregroundColor(.white)
+                                        .frame(width: UIScreen.main.bounds.width * 0.15, height: UIScreen.main.bounds.width * 0.15)
+                                        .background(Color(hex: "9C3434"))
+                                        .clipShape(Circle())
+                                        .padding()
+                                }
                             }
-                        }
-                        if(level % 2 != 0){
-                            Spacer()
-                                .frame(width: UIScreen.main.bounds.width * 0.5)
-                        }
-                    }.padding()
+                            else {
+                                NavigationLink(destination: ComingSoon()){
+                                    Text("\(level+1)")
+                                        .font(.title3)
+                                        .foregroundColor(.white)
+                                        .frame(width: UIScreen.main.bounds.width * 0.15, height: UIScreen.main.bounds.width * 0.15)
+                                        .background(Color(hex: "9C3434"))
+                                        .clipShape(Circle())
+                                        .padding()
+                                }
+                            }
+                            if(level % 2 != 1){
+                                Spacer()
+                                    .frame(width: UIScreen.main.bounds.width * 0.5)
+                            }
+                        }.padding()
+                    }
+                    Spacer()
                 }
-                Spacer()
             }
         }
+//        .background(Image("FractionMapBackground")
+//            .resizable()
+//            .scaledToFit())
+        
     }
 }
 
