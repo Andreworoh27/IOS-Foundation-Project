@@ -12,6 +12,10 @@ With interactive gameplay, and visualization we hope this app can be usefull to 
 
 https://www.figma.com/file/ECTHKDMrzkHOwiLSYK5xq7/Wireframe-Math-App?type=design&node-id=0%3A1&mode=design&t=9UdU2bTAxZEwPSnC-1
 
+## Medium Article Link :
+
+https://rmngtnhydr.medium.com/ios-foundation-from-education-to-implementing-spritekit-bc42ce865ec2
+
 ## Contributors :
 
 | Contributor               | LinkedIn                                     | Github                          |
