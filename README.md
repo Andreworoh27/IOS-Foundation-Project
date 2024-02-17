@@ -22,7 +22,7 @@ https://rmngtnhydr.medium.com/ios-foundation-from-education-to-implementing-spri
 | ------------------------- | -------------------------------------------- | ------------------------------- |
 | Andrew Oroh               | https://www.linkedin.com/in/andrew-oroh/     | https://github.com/Andreworoh27 |
 | Ellen Chandra             | www.linkedin.com/in/ellen-chandra            | https://github.com/ellenchndr   |
-| Lucas Salvacio Husada     | https://www.linkedin.com/in/lucassh          | https://github.com/Casss25      |
+| Lucas Salvacio Husada     | https://www.linkedin.com/in/lucassh          | https://github.com/Lucassalvacio      |
 | Metta Anggraini           | https://www.linkedin.com/in/metta-anggraini/ | -                               |
 | Romington Hydro           | https://www.linkedin.com/in/romington-hydro/ | https://github.com/ihiyy        |
 | Vensensius W. Krissaputra | https://bul.icu/Iv3Lp                        | -                               |
